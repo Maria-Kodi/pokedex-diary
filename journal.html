@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"> 
+</head>
+
+<body>
+  <header class="dex-header">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center gap-6">
+      <div class="dex-logo">Pokédex</div>
+
+      <div class="flex-1">
+        <nav>
+          <ul class="list-none flex flex-wrap gap-5">
+            <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+            <li><a href="journal.html" class="text-gray-400 hover:text-white">Pokédex</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <input type="text" placeholder="Search..." class="dex-search-input" id="searchInput">
+      <button class="dex-search__btn" id="searchBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-4">
+    <h1 class="text-xl mt-3 text-gray-400">My Pokémon Collection</h1>
+    <div class="w-20 h-0.5 bg-[#e94560] rounded-full mb-8"></div>
+    <div id="pokemonContainer" class="grid md:grid-cols-2 gap-8"></div>
+  </main>
+  
+  <div id="searchDialog" class="fixed inset-0 bg-black/60 items-center justify-center hidden">
+    <div class="bg-[#0f3460] p-4 rounded-lg w-96">
+      <div id="dialogContent"></div>
+      <div class="mt-4 text-right">
+        <button id="closeDialog" class="px-4 py-1 bg-[#e94560] rounded text-sm">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+  <footer class="dex-footer">
+    <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+      <div>
+        <p class="text-sm font-bold text-[#e94560] mb-2">Pokédex Refactor</p>
+        <p class="text-xs text-gray-400">
+          Built with Vite + Tailwind + PokéAPI
+        </p>
+      </div>
+  
+      <div class="text-right">
+        <p class="text-xs text-gray-400 mb-2">
+          Refactored by Maria
+        </p>
+        <p class="text-xs text-gray-500">
+          ES Modules • Render Deployment
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="/src/journal.js"></script>
+</body>
+</html>
