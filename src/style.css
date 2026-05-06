@@ -10,12 +10,12 @@
 /* LAYOUT */
 @layer components {
   .dex-main {
-    @apply flex-1 max-w-7xl mx-auto px-6 py-6 mb-8;
+    @apply flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 mb-8;
   }
 
   .dex-grid {
-    @apply grid gap-6;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    @apply grid gap-4 sm:gap-6;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 }
 
@@ -30,8 +30,11 @@
   }
 
   .dex-search-input {
-    @apply bg-[#1a1a2e] border border-[#2a2a4a] px-4 py-2 rounded-lg text-sm w-64
-           focus:outline-none focus:border-[#e94560] transition-colors;
+    @apply bg-[#1a1a2e] border border-[#2a2a4a]
+        px-4 py-2 rounded-lg text-sm
+        w-full sm:w-64
+        focus:outline-none focus:border-[#e94560]
+        transition-colors;
   }
 
   .dex-search__btn {
@@ -49,7 +52,7 @@
   }
 
   .dex-card__img {
-    @apply flex items-center justify-center relative overflow-visible h-56 pb-4;
+    @apply flex items-center justify-center relative overflow-visible h-36 sm:h-48 lg:h-56 pb-4;;
     background: radial-gradient(ellipse at center,
       rgba(233,69,96,0.08) 0%,
       rgba(15,52,96,0.6)  60%,
@@ -57,7 +60,11 @@
   }
 
   .dex-card__img img {
-    @apply relative z-10 object-contain drop-shadow-lg transition-transform duration-300;
+    @apply relative z-10 object-contain
+        max-h-28 sm:max-h-36 lg:max-h-44
+        w-auto
+        drop-shadow-lg
+        transition-transform duration-300;
   }
 
   .dex-card:hover .dex-card__img img {
